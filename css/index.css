@@ -1,0 +1,76 @@
+/* #00-Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+/* #01-RESETS----- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+	/* default for this project as all titles are regular */
+	font-weight: 400;
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+/* remove animations for people who've turned them off thanks to kievn powel */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* #02-CUSTOM PROPERTIES----- */
+:root {
+	/* reset default font size to 10px */
+	font-size: 62.5%;
+	/* #02-01-colors--------- */
+	--drark: 230, 35%, 7%;
+	--accent: 231, 77%, 90%;
+	--white: 0, 0, 100%;
+	/* #02-02-font-sizes */
+	--fs-h1: 15rem;
+	--fs-h2: 10rem;
+	--fs-h3: 5.6rem;
+	--fs-h4: 3.2rem;
+	--fs-h5: 2.8rem;
+	--fs-s-h1: 2.8rem;
+	--fs-s-h2: 1.4rem;
+	--fs-nav: 1.6rem;
+	--fs-text: 1.8rem;
+	/* #02-03-Font-Family */
+	--ff-titles: 'Bellefair', serif;
+	--ff-cond: 'Barlow Condensed', sans-serif;
+	--ff-normal: 'Barlow', sans-serif;
+	/* #02-04-Font-Family */
+	--char-sp-h5: 4.75px;
+	--char-sp-s-h5: 2.35px;
+	--char-sp-nav: 2.7px;
+}
+
+/* #03-Body Setup  */
+
+body {
+	/* reset to body */
+	margin: 0;
+	padding: 0;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
