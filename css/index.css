@@ -44,7 +44,7 @@ picture {
 	/* #02-01-colors--------- */
 	--drark: 230, 35%, 7%;
 	--accent: 231, 77%, 90%;
-	--white: 0, 0, 100%;
+	--white: 0, 0%, 100%;
 	/* #02-02-font-sizes */
 	--fs-h1: 15rem;
 	--fs-h2: 10rem;
@@ -71,6 +71,48 @@ body {
 	/* reset to body */
 	margin: 0;
 	padding: 0;
+	/* colors */
+	background-color: hsl(var(--drark));
+	color: hsl(var(--white));
+	/* fonts */
+	font-family: var(--ff-normal);
 	font-size: 1.6rem;
 	line-height: 1.5;
+}
+
+/* #04-Utilty Classes */
+
+/* #04-01- Layout Utility */
+
+.flex {
+	display: flex;
+	gap: var(--gab, 1.6rem);
+}
+
+.container {
+	max-width: 80rem;
+	margin: 0 auto;
+}
+/* #04-01- Colors */
+
+.bg-dark {
+	background-color: hsl(var(--drark));
+}
+
+.bg-accent {
+	background-color: hsl(var(--accent));
+}
+
+.bg-white {
+	background-color: hsl(var(--white));
+}
+
+.txt-dark {
+	color: hsl(var(--drark));
+}
+.txt-accent {
+	color: hsl(var(--accent));
+}
+.txt-white {
+	color: hsl(var(--white));
 }
