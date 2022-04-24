@@ -1,5 +1,5 @@
 /* #00-Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
 /* #01-RESETS----- */
 
 *,
@@ -15,7 +15,7 @@ h4,
 h5,
 h6,
 p {
-	margin-top: 0;
+	margin: 0;
 	/* default for this project as all titles are regular */
 	font-weight: 400;
 }
@@ -59,7 +59,7 @@ picture {
 	--ff-titles: 'Bellefair', serif;
 	--ff-cond: 'Barlow Condensed', sans-serif;
 	--ff-normal: 'Barlow', sans-serif;
-	/* #02-04-Font-Family */
+	/* #02-04-letter spacing */
 	--char-sp-h5: 4.75px;
 	--char-sp-s-h5: 2.35px;
 	--char-sp-nav: 2.7px;
@@ -93,7 +93,7 @@ body {
 	max-width: 80rem;
 	margin: 0 auto;
 }
-/* #04-01- Colors */
+/* #04-02- Colors */
 
 .bg-dark {
 	background-color: hsl(var(--drark));
@@ -115,4 +115,44 @@ body {
 }
 .txt-white {
 	color: hsl(var(--white));
+}
+
+/* #04-03-Typography */
+
+.numbered-title {
+	font-size: var(--fs-h5);
+	font-family: var(--ff-cond);
+	text-transform: uppercase;
+	letter-spacing: var(--char-sp-h5);
+	margin-bottom: 2em;
+}
+.numbered-title span {
+	font-weight: 700;
+	color: hsla(var(--white), 0.25);
+	margin-right: 0.5em;
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+	font-family: var(--ff-titles);
+	line-height: 1.1;
+}
+.heading-1 {
+	font-size: var(--fs-h1);
+}
+.heading-2 {
+	font-size: var(--fs-h2);
+}
+.heading-3 {
+	font-size: var(--fs-h3);
+}
+.heading-4 {
+	font-size: var(--fs-h4);
+}
+.heading-5 {
+	font-size: var(--fs-h5);
+	font-family: var(--ff-titles);
+	line-height: 1.1;
 }
