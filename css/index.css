@@ -176,5 +176,5 @@ body {
 /* #04-04-spaces */
 
 .flow > * + * {
-	margin-top: var(--flow-gap, 1rem);
+	margin-top: var(--flow-gap, 1.4rem);
 }
