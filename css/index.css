@@ -88,7 +88,7 @@ body {
 
 .flex {
 	display: flex;
-	gap: var(--gab, 1.6rem);
+	gap: var(--gap, 1.6rem);
 }
 
 .container {
@@ -218,4 +218,29 @@ body {
 .btn-large:focus::after {
 	opacity: 1;
 	transform: scale(1.5);
+}
+
+/* #05-02 tabs */
+.tab-list {
+	--gap: 3.2rem;
+}
+.tab {
+	background-color: transparent;
+	border: 0px;
+	border-bottom: 0.3rem solid transparent;
+	color: hsl(var(--accent));
+	padding: var(--underline-gap, 1.6rem) 0;
+	font-size: var(--fs-nav);
+	letter-spacing: var(--char-sp-nav);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.tab.active {
+	border-bottom-color: hsl(var(--white));
+	color: hsl(var(--white));
+}
+.tab:hover {
+	border-bottom-color: hsla(var(--white), 0.5);
 }
