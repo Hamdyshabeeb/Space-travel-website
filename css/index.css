@@ -156,3 +156,25 @@ body {
 	font-family: var(--ff-titles);
 	line-height: 1.1;
 }
+
+.subheading-1 {
+	font-family: var(--ff-normal);
+	font-size: var(--fs-s-h1);
+}
+
+.subheading-2 {
+	font-family: var(--ff-cond);
+	font-size: var(--fs-s-h2);
+	letter-spacing: var(--char-sp-s-h5);
+}
+
+.nav-text {
+	font-family: var(--ff-cond);
+	font-size: var(--fs-nav);
+	letter-spacing: var(--char-sp-nav);
+}
+/* #04-04-spaces */
+
+.flow > * + * {
+	margin-top: var(--flow-gap, 1rem);
+}
