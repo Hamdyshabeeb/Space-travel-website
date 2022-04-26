@@ -221,7 +221,8 @@ body {
 }
 
 /* #05-02 tabs */
-.tab-list {
+.tab-list,
+.dot_indicator-list {
 	--gap: 3.2rem;
 }
 .tab {
@@ -243,4 +244,23 @@ body {
 }
 .tab:hover {
 	border-bottom-color: hsla(var(--white), 0.5);
+}
+
+/* #05-03 dot-indicator */
+
+.dot-indicator {
+	background-color: hsla(var(--white), 0.17);
+	border: 0;
+	padding: 0.6em;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+}
+
+.dot-indicator.active {
+	background-color: hsla(var(--white), 1);
+}
+
+.dot-indicator:hover {
+	background-color: hsla(var(--white), 0.5);
 }
