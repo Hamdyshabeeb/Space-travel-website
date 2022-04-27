@@ -42,7 +42,7 @@ picture {
 	/* reset default font size to 10px */
 	font-size: 62.5%;
 	/* #02-01-colors--------- */
-	--drark: 230, 35%, 7%;
+	--dark: 230, 35%, 7%;
 	--accent: 231, 77%, 90%;
 	--white: 0, 0%, 100%;
 	/* #02-02-font-sizes */
@@ -74,7 +74,7 @@ body {
 	margin: 0;
 	padding: 0;
 	/* colors */
-	background-color: hsl(var(--drark));
+	background-color: hsl(var(--dark));
 	color: hsl(var(--white));
 	/* fonts */
 	font-family: var(--ff-normal);
@@ -98,7 +98,7 @@ body {
 /* #04-02- Colors */
 
 .bg-dark {
-	background-color: hsl(var(--drark));
+	background-color: hsl(var(--dark));
 }
 
 .bg-accent {
@@ -110,7 +110,7 @@ body {
 }
 
 .txt-dark {
-	color: hsl(var(--drark));
+	color: hsl(var(--dark));
 }
 .txt-accent {
 	color: hsl(var(--accent));
@@ -185,7 +185,7 @@ body {
 /* #05-01 BUTTONS */
 
 .btn-large {
-	color: hsl(var(--drark));
+	color: hsl(var(--dark));
 	background-color: hsl(var(--white));
 	text-decoration: none;
 	font-family: var(--ff-titles);
@@ -290,5 +290,34 @@ body {
 .num-indicator.active {
 	border-color: hsla(var(--white), 1);
 	background-color: hsla(var(--white), 1);
-	color: hsl(var(--drark));
+	color: hsl(var(--dark));
+}
+
+/* #05-05 Primary Navigation */
+
+.primary-navigation {
+	--gap: 12.8rem;
+	--underline-gap: 3.2rem;
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: var(--ff-cond);
+	font-size: var(--fs-nav);
+	letter-spacing: var(--char-sp-nav);
+	justify-content: center;
+	background-color: hsla(var(--white), 0.1);
+}
+.primary-navigation a {
+	text-decoration: none;
+	color: hsla(var(--white), 1);
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus {
+	border-bottom-color: hsla(var(--white), 0.5);
+}
+.primary-navigation span {
+	margin-right: 1rem;
+	font-weight: 700;
 }
