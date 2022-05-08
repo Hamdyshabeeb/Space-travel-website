@@ -55,7 +55,7 @@ picture {
 	--fs-s-h2: 1.6rem;
 	--fs-nav: 1.6rem;
 	--fs-text: 1.5rem;
-	--fs-btn-large: 3.2rem;
+	--fs-btn-large: 2rem;
 	/* #02-03-Font-Family */
 	--ff-titles: 'Bellefair', serif;
 	--ff-cond: 'Barlow Condensed', sans-serif;
@@ -74,6 +74,7 @@ picture {
 		--fs-h1: 15rem;
 		--fs-s-h2: 2rem;
 		--fs-text: 1.6rem;
+		--fs-btn-large: 3.2rem;
 
 		/* #02-04-letter spacing */
 		--char-sp-s-h2: 3.38px;
@@ -103,6 +104,7 @@ body {
 	font-family: var(--ff-normal);
 	font-size: var(--fs-text);
 	line-height: 1.6;
+	min-height: 100vh;
 }
 
 /* #04-Utilty Classes */
@@ -176,6 +178,7 @@ body {
 .heading-4 {
 	font-family: var(--ff-titles);
 	line-height: 1.1;
+	text-transform: uppercase;
 }
 .heading-1 {
 	font-size: var(--fs-h1);
@@ -205,6 +208,7 @@ body {
 	font-family: var(--ff-cond);
 	font-size: var(--fs-s-h2);
 	letter-spacing: var(--char-sp-s-h2);
+	text-transform: uppercase;
 }
 
 .nav-text {
@@ -236,9 +240,22 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	width: 27.4rem;
-	height: 27.4rem;
+	width: 15rem;
+	height: 15rem;
 	position: relative;
+}
+@media (min-width: 35em) {
+	.btn-large {
+		width: 24.4rem;
+		height: 24.4rem;
+	}
+}
+
+@media (min-width: 45em) {
+	.btn-large {
+		width: 27.4rem;
+		height: 27.4rem;
+	}
 }
 
 .btn-large::after {
@@ -341,6 +358,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	flex-grow: 0;
 }
 .logo {
 	margin: 2rem;
@@ -456,4 +474,58 @@ body {
 	.primary-navigation span {
 		display: inline;
 	}
+}
+
+.page-text {
+	max-width: 50ch;
+}
+
+/* #06-01 page-specific */
+
+.home {
+	background-image: url(../assets/home/background-home-mobile.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	align-items: center;
+	padding: 5rem 0;
+}
+@media (min-width: 35em) {
+	main {
+		padding: 10rem 0 9rem;
+	}
+
+	.home {
+		background-image: url(../assets/home/background-home-tablet.jpg);
+		background-position: center;
+	}
+}
+
+@media (min-width: 45em) {
+	main {
+		padding: 0 0 clamp(5rem, 12vh, 10rem);
+		flex-direction: row;
+		align-items: flex-end;
+	}
+
+	.home {
+		background-image: url(../assets/home/background-home-desktop.jpg);
+		background-position: center;
+	}
+
+	.page-text {
+		text-align: left;
+	}
+}
+
+.home h1 span {
+	display: block;
 }
