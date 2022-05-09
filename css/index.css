@@ -380,6 +380,10 @@ body {
 	background-position: center;
 	cursor: pointer;
 }
+
+.nav-toggle.open {
+	background-image: url('../assets/shared/icon-close.svg');
+}
 .primary-navigation {
 	position: fixed;
 	top: 0;
@@ -407,6 +411,10 @@ body {
 		background-color: hsla(var(--white), 0.05);
 		backdrop-filter: blur(1.5rem);
 	}
+}
+
+.primary-navigation.open {
+	transform: translateX(0%);
 }
 .nav-tab {
 	border-bottom: 0rem;
