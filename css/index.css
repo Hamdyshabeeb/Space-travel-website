@@ -48,7 +48,7 @@ picture {
 	/* #02-02-font-sizes */
 	--fs-h1: 8rem;
 	--fs-h2: clamp(5.6rem, 1rem + 10vw, 10rem);
-	--fs-h3: 5.6rem;
+	--fs-h3: clamp(2.4rem, 1.6rem + 3vw, 5.6rem);
 	--fs-h4: 3.2rem;
 	--fs-h5: 1.6rem;
 	--fs-s-h1: 2.8rem;
@@ -301,7 +301,8 @@ body {
 .num_indicator-list {
 	--gap: 3.2rem;
 }
-.tab-list {
+.tab-list,
+.dot_indicator-list {
 	justify-content: center;
 }
 .tab,
@@ -337,10 +338,16 @@ body {
 .dot-indicator {
 	background-color: hsla(var(--white), 0.17);
 	border: 0;
-	padding: 0.6em;
+	padding: 0.5rem;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: background-color 0.5s ease;
+}
+
+@media (min-width: 45em) {
+	.dot-indicator {
+		padding: 0.8rem;
+	}
 }
 
 .dot-indicator.active {
@@ -568,7 +575,7 @@ main {
 	display: block;
 }
 
-/* #06-01 Destination */
+/* #06-02 Destination */
 
 .carousel-outer {
 	width: 80vw;
@@ -673,14 +680,95 @@ main {
 	.carousel-item {
 		text-align: left;
 	}
-	.carousel-item p {
-		max-width: 45ch;
-	}
 
 	.item-footer {
 		margin-top: 4.5rem;
 		padding-bottom: 0;
 		justify-content: flex-start;
 		gap: min(6vw, 8rem);
+	}
+}
+
+/* #06-02 crew */
+.main-content {
+	flex-direction: column;
+	--gap: 3rem;
+}
+.crew h3 span {
+	display: block;
+	font-size: clamp(1.6rem, 0.66em, 3.2rem);
+	color: hsla(var(--white), 0.5);
+	margin-bottom: 0.8rem;
+}
+.crew .dot_indicator-list {
+	--gap: 2rem;
+}
+.crew .info {
+	flex-direction: column;
+	--gap: 3rem;
+}
+
+.crew .illisturation .carousel-item {
+	align-items: flex-end;
+	border-bottom: 1px solid hsla(var(--white), 0.1);
+}
+
+.crew .illisturation img {
+	height: 25.3rem;
+	object-fit: cover;
+}
+
+.crew {
+	background-image: url(../assets/crew/background-crew-mobile.jpg);
+}
+
+@media (min-width: 35em) {
+	.crew {
+		background-image: url(../assets/crew/background-crew-tablet.jpg);
+	}
+	.crew .info {
+		order: 1;
+	}
+	.crew .illisturation {
+		order: 2;
+	}
+
+	.crew .info .dot_indicator-list {
+		order: 2;
+	}
+
+	.crew .illisturation img {
+		height: auto;
+	}
+}
+
+@media (min-width: 45em) {
+	.crew {
+		background-image: url(../assets/crew/background-crew-desktop.jpg);
+	}
+
+	.main-content {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		--gap: min(5vw, 5rem);
+	}
+	.dot_indicator-list {
+		justify-content: flex-start;
+	}
+	.crew .illisturation {
+		margin-top: -20vh;
+	}
+
+	.crew .illisturation .carousel-item {
+		border-bottom: none;
+	}
+	.crew .illisturation img {
+		height: auto;
+		margin-top: 0;
+	}
+
+	.crew .info {
+		justify-content: space-around;
 	}
 }
