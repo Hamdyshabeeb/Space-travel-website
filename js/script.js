@@ -1,6 +1,7 @@
 const navToggleButton = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.primary-navigation');
 const tabList = document.querySelectorAll('.tab');
+const indicatorList = document.querySelectorAll('.dot-indicator');
 // add fuctionality to nav button
 navToggleButton.addEventListener('click', () => {
 	navToggleButton.classList.toggle('open');
@@ -10,10 +11,14 @@ navToggleButton.addEventListener('click', () => {
 tabList.forEach((tab) => {
 	tab.addEventListener('click', carousel);
 });
+indicatorList.forEach((dotIndicator) => {
+	dotIndicator.addEventListener('click', carousel);
+});
 
 function carousel(e) {
 	const currentTab = e.target;
-	const activeTab = [...tabList].filter((tab) =>
+	const tabs = e.target.parentNode;
+	const activeTab = [...tabs.children].filter((tab) =>
 		tab.classList.contains('active')
 	)[0];
 	const carouselList = document.querySelectorAll('.carousel-inner');
