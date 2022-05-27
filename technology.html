@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="/css/index.css" />
+		<title>Frontend Mentor | Space tourism website</title>
+	</head>
+	<body class="technology">
+		<header class="page-header flex">
+			<div class="logo">
+				<img src="assets/shared/logo.svg" alt="Space toriusm logo" />
+			</div>
+			<button class="nav-toggle"><span class="sr-only">Menu</span></button>
+			<nav>
+				<ul class="primary-navigation flex">
+					<li class="nav-tab">
+						<a href="index.html"><span>00</span>HOME</a>
+					</li>
+					<li class="nav-tab">
+						<a href="destination.html"><span>01</span>DESTINATION</a>
+					</li>
+					<li class="nav-tab">
+						<a href="./crew.html"><span>02</span>CREW</a>
+					</li>
+					<li class="nav-tab active">
+						<a href="./technology.html"><span>03</span>TECHNOLOGY</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="flex">
+			<div class="container">
+				<h2 class="numbered-title main-title">
+					<span>03</span> SPACE LAUNCH 101
+				</h2>
+			</div>
+
+			<div class="main-content flex">
+				<div class="illisturation carousel-outer">
+					<div class="carousel-inner flex">
+						<div class="carousel-item">
+							<img
+								src="assets/technology/image-launch-vehicle-landscape.jpg"
+								alt="lunch vechile"
+								srcset="
+									assets/technology/image-launch-vehicle-landscape.jpg 768w,
+									assets/technology/image-launch-vehicle-portrait.jpg  515w
+								"
+								sizes="(min-width: 45em) 515px, 768px"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="assets/technology/image-spaceport-landscape.jpg"
+								alt="spaceport"
+								srcset="
+									assets/technology/image-spaceport-landscape.jpg 768w,
+									assets/technology/image-spaceport-portrait.jpg  515w
+								"
+								sizes="(min-width: 45em) 515px, 768px"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="assets/technology/image-space-capsule-landscape.jpg"
+								alt="space capsule"
+								srcset="
+									assets/technology/image-space-capsule-landscape.jpg 768w,
+									assets/technology/image-space-capsule-portrait.jpg  515w
+								"
+								sizes="(min-width: 45em) 515px, 768px"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="num_indicator-list flex">
+					<button class="active num-indicator" data-number="0">1</button
+					><button class="num-indicator" data-number="1">2</button
+					><button class="num-indicator" data-number="2">3</button>
+				</div>
+				<div class="info carousel-outer">
+					<div class="carousel-inner flex">
+						<article class="carousel-item flow">
+							<header>
+								<p class="txt-accent subheading-2">THE TERMINOLOGY…</p>
+								<h3 class="heading-3">LAUNCH VEHICLE</h3>
+							</header>
+							<p class="txt-accent">
+								A launch vehicle or carrier rocket is a rocket-propelled vehicle
+								used to carry a payload from Earth's surface to space, usually
+								to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+								powerful in operation. Standing 150 metres tall, it's quite an
+								awe-inspiring sight on the launch pad!
+							</p>
+						</article>
+						<article class="carousel-item flow">
+							<header>
+								<p class="txt-accent subheading-2">THE TERMINOLOGY…</p>
+								<h3 class="heading-3">SPACEPORT</h3>
+							</header>
+							<p class="txt-accent">
+								A spaceport or cosmodrome is a site for launching (or receiving)
+								spacecraft, by analogy to the seaport for ships or airport for
+								aircraft. Based in the famous Cape Canaveral, our spaceport is
+								ideally situated to take advantage of the Earth’s rotation for
+								launch.
+							</p>
+						</article>
+						<article class="carousel-item flow">
+							<header>
+								<p class="txt-accent subheading-2">THE TERMINOLOGY…</p>
+								<h3 class="heading-3">SPACE CAPSULE</h3>
+							</header>
+							<p class="txt-accent">
+								A space capsule is an often-crewed spacecraft that uses a
+								blunt-body reentry capsule to reenter the Earth's atmosphere
+								without wings. Our capsule is where you'll spend your time
+								during the flight. It includes a space gym, cinema, and plenty
+								of other activities to keep you entertained.
+							</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="js/script.js"></script>
+	</body>
+</html>
